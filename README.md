@@ -48,6 +48,8 @@ docker compose up -d --build
 
 Приложение будет доступно на **`http://localhost:<PORT>`** (порт берётся из `.env`).
 
+Если у вас имя папки проекта заканчивается на `_` и Docker ругается на имя образа, в `docker-compose.yml` уже задано явное имя образа `konkurent-karton-app`.
+
 ### Проверка
 
 - Health:
