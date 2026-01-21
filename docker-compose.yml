@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      # обязательная переменная: куда пересылать данные
+      - TARGET_SERVER_URL=${TARGET_SERVER_URL}
+      # порт приложения (берем из .env, по умолчанию 3000)
+      - PORT=${PORT:-3000}
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+    restart: unless-stopped
+
